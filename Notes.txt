@@ -1,0 +1,11 @@
+Remember:
+* The default Django server is not fit for production. Got to use a production server.
+* Default server automatically reloads for code changes, but not for file adds (restart needed).
+
+
+
+Commands:
+* create project: django-admin startproject projectName
+* start default server: python manage.py runserver
+* create an app: python manage.py startapp appName
+
