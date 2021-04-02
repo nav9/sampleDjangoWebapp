@@ -1,11 +1,33 @@
 Remember:
 * The default Django server is not fit for production. Got to use a production server.
 * Default server automatically reloads for code changes, but not for file adds (restart needed).
+* To create templates for an app, a 'templates' folder has to be created in the app folder.
 
 
 
 Commands:
-* create project: django-admin startproject projectName
-* start default server: python manage.py runserver
-* create an app: python manage.py startapp appName
-
+* Create project: 
+    django-admin startproject projectName
+* Start default server: 
+    python manage.py runserver
+* Create an app: 
+    python manage.py startapp appName
+* Getting a Django shell with the path to siteName/settings.py automatically included:
+    python manage.py shell
+* For enabling database migrations for an app, it first
+    has to be recognized in settings.py. Make an entry in 
+    INSTALLED_APPS and then run python manage.py makemigrations appName
+* Making model changes is a 3 stage process:
+    1. Change models in model.py
+    2. Run python manage.py makemigrations
+    3. Run python manage.py migrate
+* Creating an admin user: 
+    python manage.py createsuperuser    
+* For the app's models to be accessible in the admin interface:
+    in appName/admin.py, type:
+    from .models import Question
+    admin.site.register(Question)    
+    
+URL finding:
+Settings.py has URLCONF -> points to siteName.urls.py -> points to appName.urls.py    
+    
