@@ -26,8 +26,17 @@ Commands:
 * For the app's models to be accessible in the admin interface:
     in appName/admin.py, type:
     from .models import Question
-    admin.site.register(Question)    
+    admin.site.register(Question)  
+* To run test cases for an app:
+    python manage.py test appName 
     
 URL finding:
 Settings.py has URLCONF -> points to siteName.urls.py -> points to appName.urls.py    
+    
+    
+    
+    
+    
+    
+    
     
