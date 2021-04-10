@@ -12,6 +12,10 @@ Commands:
     python manage.py runserver
 * Create an app: 
     python manage.py startapp appName
+    Then go to settings.py and add the installed app like:
+    INSTALLED_APPS = [
+    'landingPage.apps.LandingpageConfig', #manually added
+    The LandingpageConfig class would have been automatically created in landingPage/apps.py
 * Getting a Django shell with the path to siteName/settings.py automatically included:
     python manage.py shell
 * For enabling database migrations for an app, it first
