@@ -33,6 +33,39 @@ Commands:
     admin.site.register(Question)  
 * To run test cases for an app:
     python manage.py test appName 
+* Use the templating system with {% extends "base.html" %} and {% block contentName %} with {% endblock contentName %} 
+* Variables look like this: {{ variable }}
+* Filters look like this: {{ name|lower }}. This displays the value of the {{ name }} variable after being filtered through the lower filter, which converts text to lowercase. Use a pipe (|) to apply a filter. 
+  Basic terms: https://docs.djangoproject.com/en/3.1/ref/templates/language/
+  Filter ref: https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#ref-templates-builtins-filters
+* Django's escape filter automatically converts < to &lt etc, to prevent XSS attacks:
+    This will be escaped: {{ data }}
+    This will not be escaped: {{ data|safe }}
+  It can also be used as a tag (https://docs.djangoproject.com/en/3.1/ref/templates/builtins/#ref-templates-builtins-tags):
+    {% autoescape off %}
+        Hello {{ name }}
+    {% endautoescape %}
+  And default strings can be specified as:
+    {{ data|default:"3 &lt; 2" }}
+* Accessing class methods and looping is possible. Even counting.
+    {% for comment in task.comment_set.all %}
+        {{ comment }}
+    {% endfor %}
+   and
+    {{ task.comment_set.all.count }}
+   See: https://docs.djangoproject.com/en/dev/ref/templates/language/#template-inheritance
+   The limitation in template function calls, is that arguments can't be passed. The data has to be calculated
+   during the view and sent to the template.
+* If else also possible:
+  {% if athlete_list %}
+    Number of athletes: {{ athlete_list|length }}
+  {% elif athlete_in_locker_room_list %}
+    Athletes should be out of the locker room soon!
+  {% else %}
+    No athletes.
+  {% endif %}
+* comment syntax: {# #}.
+
     
 URL finding:
 Settings.py has URLCONF -> points to siteName.urls.py -> points to appName.urls.py    
