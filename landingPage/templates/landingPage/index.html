@@ -18,6 +18,7 @@
 
   <!-- Custom styles for this template -->
   <link href="{% static 'css/business-frontpage.css' %}" rel="stylesheet">
+  <link href="{% static 'custom_css/navbar_customizations.css' %}" rel="stylesheet">
   
   <!-- Favicon -->
   <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
@@ -29,7 +30,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Start Bootstrap</a>
+      <a class="navbar-brand" href="#"><img id="navbarBrandIcon" src="{% static 'img/icon_whiteOnBlue.png' %}" alt="BrandIcon">AnD Industries</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -100,7 +101,7 @@
     <div class="row">
       <div class="col-md-4 mb-5">
         <div class="card h-100">
-          <img class="card-img-top" src="https://placehold.it/300x200" alt="">
+          <img class="card-img-top cardImage" src="{% static 'img/icon_darkGreyOnLightGreyWithBorder.png' %}" alt="">
           <div class="card-body">
             <h4 class="card-title">Card title</h4>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus.</p>
@@ -112,7 +113,7 @@
       </div>
       <div class="col-md-4 mb-5">
         <div class="card h-100">
-          <img class="card-img-top" src="https://placehold.it/300x200" alt="">
+          <img class="card-img-top cardImage" src="{% static 'img/icon_darkGreyOnLightGreyWithBorder.png' %}" alt="">
           <div class="card-body">
             <h4 class="card-title">Card title</h4>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque sequi doloribus totam ut praesentium aut.</p>
@@ -124,7 +125,7 @@
       </div>
       <div class="col-md-4 mb-5">
         <div class="card h-100">
-          <img class="card-img-top" src="https://placehold.it/300x200" alt="">
+          <img class="card-img-top cardImage" src="{% static 'img/icon_darkGreyOnLightGreyWithBorder.png' %}" alt="">
           <div class="card-body">
             <h4 class="card-title">Card title</h4>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
