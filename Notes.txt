@@ -66,7 +66,7 @@ Commands:
   {% endif %}
 * comment syntax: {# #}.
 
-    
+
 URL finding:
 Settings.py has URLCONF -> points to siteName.urls.py -> points to appName.urls.py    
     
